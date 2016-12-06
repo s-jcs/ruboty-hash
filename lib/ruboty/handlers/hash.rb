@@ -10,6 +10,8 @@ module Ruboty
       )
 
       def create(message)
+        from = message[:from]
+        to = message[:to]
         message.reply("Registered hash: #{from} -> #{to}")
       end
 
