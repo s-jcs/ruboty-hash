@@ -4,15 +4,13 @@ module Ruboty
       NAMESPACE = "hash"
 
       on(
-        /hash (?<from>.+?) -> (?<to>.+)\z/m,
-        description: "Create alias message",
-        name: "create",
+        /save hash salt (?<salt_key>.+?)\z/m,
+        description: "Create alias messag",
+        name: "save_hash_salt",
       )
 
-      def create(message)
-        from = message[:from]
-        to = message[:to]
-        message.reply("Registered hash: #{from} -> #{to}")
+      def save_hash_salt(message)
+        message.reply("Registered salk_key: #{salt_key}")
       end
 
       private
